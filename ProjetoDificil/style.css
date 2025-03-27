@@ -1,4 +1,8 @@
 button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 200px;
   width: 200px;
   margin: 15px;
@@ -7,29 +11,58 @@ button{
 }
 
 button:hover{
-  scale: 1.1;
-  transition: 0.1s;
-  transform: rotate(7deg);
+  background-color: rgb(241, 241, 241);
+  scale: 1.05;
+  transition: 0.05s;
+  transform: rotate(5deg);
 }
 
 .choiceButtons{
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .container{
   background-color: whitesmoke;
   height: 20%;
   width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
-.containerChoice{
-  height: 40%;
-  width: 90%;
+.containerChoice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  margin: 10px auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.containerChoice img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: opacity 0.5s;
+}
+
+.containerChoice img.hidden {
+  opacity: 0;
+  transition: 1s;
+  transform: scale(0.2);
 }
 
 .choiceRow{
-  margin-top: 10%;
+  margin-top: 2%;
   padding: 20px;
 }
 
@@ -41,4 +74,5 @@ button:hover{
 .row{
   display: flex;
   flex-direction: row;
+  gap: 200px;
 }
