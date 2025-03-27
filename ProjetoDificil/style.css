@@ -1,4 +1,5 @@
-button{
+/* Estilização geral dos botões */
+button {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,23 +9,26 @@ button{
   margin: 15px;
   border-radius: 15px;
   overflow: hidden;
+  background-color: #fff; /* Cor de fundo base para os botões */
+  border: 1px solid #ccc; /* Adicionando borda para dar destaque */
+  transition: transform 0.3s ease, background-color 0.2s ease;
 }
 
-button:hover{
+/* Efeito de hover nos botões */
+button:hover {
   background-color: rgb(241, 241, 241);
-  scale: 1.05;
-  transition: 0.05s;
-  transform: rotate(5deg);
+  transform: rotate(5deg) scale(1.05);
 }
 
-.choiceButtons{
+/* Estilização das divs de escolha */
+.choiceButtons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
 
-.container{
+.container {
   background-color: whitesmoke;
   height: 20%;
   width: 90%;
@@ -34,8 +38,10 @@ button:hover{
   padding: 3%;
   margin-top: 1%;
   margin-bottom: 1%;
+  border-radius: 8px; /* Bordas arredondadas para um visual mais moderno */
 }
 
+/* Container de cada escolha */
 .containerChoice {
   display: flex;
   justify-content: center;
@@ -46,33 +52,42 @@ button:hover{
   border: 2px solid #ccc;
   border-radius: 10px;
   background-color: #f9f9f9;
+  transition: transform 0.3s ease, opacity 0.5s ease;
 }
 
 .containerChoice img {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
-  transition: opacity 0.5s;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .containerChoice img.hidden {
   opacity: 0;
-  transition: 1s;
   transform: scale(0.2);
 }
 
-.choiceRow{
-  margin-top: 2%;
-  padding: 20px;
-}
-
-.textoResultado{
+/* Para o resultado */
+.textoResultado {
   display: flex;
   justify-content: center;
 }
 
-.row{
+.row {
   display: flex;
-  flex-direction: row;
-  gap: 200px;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#resultado {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Adicionando foco nos botões para acessibilidade */
+button:focus {
+  outline: 2px solid #4d90fe;
 }

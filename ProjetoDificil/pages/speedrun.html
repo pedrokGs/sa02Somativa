@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Normal Game</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <link rel="stylesheet" href="../style.css"/>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="containerChoice">
+          <img  id="escolhaUser" alt="" height="250px" width="250px">
+        </div>
+
+        <div class="containerChoice">
+          <img id="escolhaComputer" alt="" height="250px" width="250px">
+        </div>
+      </div>
+      
+    </div>
+    <div class="textoResultado">
+      <p id="resultado">
+        Escolha uma opção para começar o jogo
+      </p>
+    </div>
+
+    <div class="choiceRow">
+      <div class="choiceButtons">
+        <button class="escolhaPedra btn btn-light" class="btn btn-primary" onclick="gameStart('Pedra')">
+          <div class="col">
+            <img src="../assets/img/pedra.png" alt="" height="90%" width="90%">
+            <p>Pedra</p>
+          </div>
+        </button>
+  
+        <button class="escolhaTesoura btn btn-light" onclick="gameStart('Tesoura')">
+          <img src="../assets/img/tesoura.png" alt="" height="90%" width="90%">
+          <p>Tesoura</p>
+        </button>
+      
+        <button class="escolhaPapel btn btn-light" onclick="gameStart('Papel')">
+          <img src="../assets/img/papel.png" alt="" height="90%" width="90%">
+          <p>Papel</p>
+        </button>
+      </div>
+    </div>
+
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../script.js"></script>
+</html>
