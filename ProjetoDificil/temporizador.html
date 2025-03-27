@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Temporizador</title>
+	<link rel="stylesheet" href="https://unpkg.com/bulma">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header style="text-align: center; padding: 20px; background-color: #f4f4f4;">
+		<h1>Temporizador</h1>
+    </header>
+
+	<section class="section">
+		<div class="columns is-centered">
+			<div class="column has-text-centered">
+				<div id="contenedorInputs">
+                
+                    <div class="field">
+						<label class="label">Horas</label>
+						<div class="control">
+							<input class="input" id="horas" type="number" placeholder="Horas">
+						</div>
+					</div>
+					<div class="field">
+						<label class="label">Minutos</label>
+						<div class="control">
+							<input class="input" id="minutos" type="number" placeholder="Minutos">
+						</div>
+					</div>
+					<div class="field">
+						<label class="label">Segundos</label>
+						<div class="control">
+							<input class="input" id="segundos" type="number" placeholder="Segundos">
+						</div>
+					</div>
+				</div>
+				<h2 id="tiempoRestante">00:00:00.0</h2>
+				<button id="btnIniciar" class="button is-success"><span class="mdi mdi-play"></span></button>
+				<button id="btnPausar" class="button is-success"><span class="mdi mdi-pause"></span></button>
+				<button id="btnDetener" class="button is-success"><span class="mdi mdi-stop"></span></button>
+                <div id="mensagem"></div>
+
+				<br>
+			</div>
+		</div>
+	</section>
+
+    <footer style="text-align: center; padding: 10px; background-color: #f4f4f4;">
+		<p>Footer 56yhthnrr</p>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
