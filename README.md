@@ -76,9 +76,4 @@ Este projeto implementa o clássico jogo Pedra, Papel e Tesoura com dois modos d
 - Lidar com a aleatoriedade no jogo Pedra, Papel e Tesoura, garantindo resultados justos e imprevisíveis.
 - Documentar o código de forma clara para facilitar a manutenção e o entendimento futuro.
 
-## Como executar os projetos:
-1. Clone este repositório em sua máquina local.
-2. Navegue até o diretório do projeto que deseja executar.
-3. Abra o arquivo `index.html` correspondente no navegador para iniciar o projeto.
-
 Cada projeto foi desenvolvido com foco em interatividade e usabilidade, utilizando tecnologias web modernas.

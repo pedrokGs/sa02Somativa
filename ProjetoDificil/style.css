@@ -1,5 +1,6 @@
 /* Estilização geral dos botões */
 button {
+  /* Configurações de layout e aparência dos botões */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,28 +8,32 @@ button {
   height: 200px;
   width: 200px;
   margin: 15px;
-  border-radius: 15px;
+  border-radius: 15px; /* Bordas arredondadas */
   overflow: hidden;
-  background-color: #fff; /* Cor de fundo base para os botões */
-  border: 1px solid #ccc; /* Adicionando borda para dar destaque */
-  transition: transform 0.3s ease, background-color 0.2s ease;
+  background-color: #fff; /* Cor de fundo base */
+  border: 1px solid #ccc; /* Borda para destaque */
+  transition: transform 0.3s ease, background-color 0.2s ease; /* Transições suaves */
 }
 
 /* Efeito de hover nos botões */
 button:hover {
+  /* Alterações visuais ao passar o mouse */
   background-color: rgb(241, 241, 241);
-  transform: rotate(5deg) scale(1.05);
+  transform: rotate(5deg) scale(1.05); /* Rotação e aumento */
 }
 
 /* Estilização das divs de escolha */
 .choiceButtons {
+  /* Layout flexível para os botões de escolha */
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 20px; /* Espaçamento entre os botões */
 }
 
+/* Estilização do container principal */
 .container {
+  /* Configurações de layout e aparência do container */
   background-color: whitesmoke;
   height: 20%;
   width: 90%;
@@ -38,51 +43,61 @@ button:hover {
   padding: 3%;
   margin-top: 1%;
   margin-bottom: 1%;
-  border-radius: 8px; /* Bordas arredondadas para um visual mais moderno */
-  transition: background-color 1s;
+  border-radius: 8px; /* Bordas arredondadas */
+  transition: background-color 1s; /* Transição suave de cor */
 }
 
 /* Container de cada escolha */
 .containerChoice {
+  /* Layout e aparência dos containers de escolha */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 300px;
   width: 300px;
   margin: 10px auto;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  transition: transform 0.3s ease, opacity 0.5s ease;
+  border: 2px solid #ccc; /* Borda para destaque */
+  border-radius: 10px; /* Bordas arredondadas */
+  background-color: #f9f9f9; /* Cor de fundo */
+  transition: transform 0.3s ease, opacity 0.5s ease; /* Transições suaves */
 }
 
+/* Estilização das imagens dentro dos containers de escolha */
 .containerChoice img {
+  /* Ajuste de tamanho e transições */
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
   transition: opacity 0.5s ease-in-out;
 }
 
+/* Classe para ocultar imagens */
 .containerChoice img.hidden {
+  /* Efeito de ocultação */
   opacity: 0;
   transform: scale(0.2);
 }
 
-/* Para o resultado */
+/* Estilização para o texto do resultado */
 .textoResultado {
+  /* Centralização do texto */
   display: flex;
   justify-content: center;
 }
 
+/* Estilização para linhas flexíveis */
 .row {
+  /* Layout flexível para elementos em linha */
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 20px; /* Espaçamento entre os elementos */
   width: 100%;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permite quebra de linha */
 }
 
+/* Estilização do texto do resultado */
 #resultado {
+  /* Aparência do texto */
   text-align: center;
   font-size: 1.5rem;
   color: #333;
@@ -90,29 +105,36 @@ button:hover {
 
 /* Adicionando foco nos botões para acessibilidade */
 button:focus {
+  /* Destaque visual ao focar no botão */
   outline: 2px solid #4d90fe;
 }
 
+/* Estilização do título principal */
 h1 {
+  /* Aparência do título */
   font-size: 3rem;
   margin-bottom: 20px;
   font-weight: bold;
   color: #000000;
-  text-shadow: 2px 2px 10px rgba(119, 119, 119, 0.3);
+  text-shadow: 2px 2px 10px rgba(119, 119, 119, 0.3); /* Sombra para destaque */
 }
 
+/* Container para os modos */
 .mode-container {
+  /* Layout flexível para os modos */
   display: flex;
-  gap: 30px;
+  gap: 30px; /* Espaçamento entre os modos */
   justify-content: center;
 }
 
+/* Cartões de modo */
 .mode-card {
+  /* Aparência dos cartões */
   background: #fff;
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
   text-decoration: none;
   color: #333;
   font-size: 1.5rem;
@@ -124,19 +146,25 @@ h1 {
   justify-content: center;
 }
 
+/* Efeito de hover nos cartões de modo */
 .mode-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+  /* Alterações visuais ao passar o mouse */
+  transform: scale(1.1); /* Aumento */
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
 }
 
+/* Botão de voltar */
 .back-button {
+  /* Posição e aparência do botão */
   position: absolute;
   top: 10px;
   left: 10px;
-  cursor: pointer;
+  cursor: pointer; /* Indica interatividade */
 }
 
+/* Estilização responsiva para telas menores */
 @media (max-width: 480px) {
+  /* Ajustes no container principal */
   .container {
     flex-direction: column;
     height: auto;
@@ -144,24 +172,28 @@ h1 {
     padding: 10px;
   }
 
+  /* Ajustes nos botões de escolha */
   .choiceButtons {
     flex-direction: row;
     align-items: center;
   }
 
+  /* Ajustes nos containers de escolha */
   .containerChoice {
     width: 90%;
     margin: 10px auto;
     height: 50%;
   }
 
+  /* Ajustes nos botões */
   button {
     width: 100%;
     height: auto;
     margin: 5px 0;
   }
 
-  .mode-container{
+  /* Ajustes no container de modos */
+  .mode-container {
     display: flex;
     flex-direction: column;
   }
