@@ -1,10 +1,11 @@
 .nowplaying {
       font-size: 120px;
       line-height: 1;
-      color: #eee;
+      color: #000000;
       text-shadow: 0 0 5rem #028ae9;
       transition: all .07s ease;
       min-height: 120px;
+      margin-left: 5%;
     }
 
     .keys {
@@ -86,4 +87,16 @@
       bottom: 7px;
       transition: opacity .3s ease-out;
       font-size: 20px;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      cursor: pointer;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #ffffff, #b6b6b6);
+      height: 100vh;
     }
