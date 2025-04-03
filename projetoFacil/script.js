@@ -1,33 +1,34 @@
-const oitavas = document.querySelectorAll(".notas")
-    note = document.querySelector(".tocando"),
-    teclas = document.querySelectorAll(".teclas");
+const keys = document.querySelectorAll(".key"),
+  note = document.querySelector(".nowplaying"),
+  hints = document.querySelectorAll(".hints");
 
-function tocarNota(e) {
-    const audio = document.querySelector(`audio[data-key="${e.notasCodigo}"]`),
-    notas = document.querySelector(`.notas[data-key="${e.notasCodigo}"]`);
-    
-    if (!notas)return;
+function playNote(e) {
+  // Verificando se a tecla pressionada tem o código correspondente ao keyCode
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`),
+        key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
 
-    const notasMusicas = notas.getAttribute("data-note");
+  if (!key) return; // Se a tecla não corresponder a uma tecla do piano, retorna
 
-    notas.classList.add("tocar");
-    note.innerHTML = notasMusicas;
-    audio.currentTime = 0;
-    audio.play();
+  const keyNote = key.getAttribute("data-note");
 
+  key.classList.add("playing");
+  note.innerHTML = keyNote;
+  audio.currentTime = 0; // Recomeça o áudio
+  audio.play(); // Reproduz o som
 }
 
 function removeTransition(e) {
-    if (e.propertyName !== "transformar") return;
-    this.classList.remove("tocar");
+  if (e.propertyName !== "transform") return;
+  this.classList.remove("playing");
 }
 
-function teclas(e, index) {
-    e.setAttribute("style","trasition-delay:"+ index * 50 + "ms");
+function hintsOn(e, index) {
+  e.setAttribute("style", "transition-delay:" + index * 50 + "ms");
 }
 
-teclas.forEach(tocartecla);
+hints.forEach(hintsOn);
 
-oitavas.forEach(notas => notas.addEventListener("transitioned", removeTransition)); 
-    
-window.addEventListener("keydown", tocarNota);
+keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+
+// Escuta o evento de pressionamento de tecla
+window.addEventListener("keydown", playNote);
