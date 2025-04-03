@@ -91,3 +91,46 @@ button:hover {
 button:focus {
   outline: 2px solid #4d90fe;
 }
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 2px 2px 10px rgba(119, 119, 119, 0.3);
+}
+
+.mode-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.mode-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mode-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}

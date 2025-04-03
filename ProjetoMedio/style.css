@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    text-align: center;
+
+}
+
+.header{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+h2#tempoRestante{
+	font-size: 2rem;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
+    justify-content: center;
+  }
+  
+  /* Estilo para os links que se parecem com botões */
+  .btn {
+    display: inline-block; /* Faz o link se comportar como um bloco de nível inline */
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efeito quando o link é hover */
+  .btn:hover {
+    background-color: #444;
+  }
+
+.footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }

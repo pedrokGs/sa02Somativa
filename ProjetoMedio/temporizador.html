@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Temporizador con JavaScript - By Parzibyte</title>
+	<link rel="stylesheet" href="https://unpkg.com/bulma">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Temporizador</h1>
+    </div>
+    <h1>Temporizador</h1>
+	<section class="section">
+		<div class="columns is-centered">
+			<div class="column has-text-centered">
+				<div id="contenedorInputs">
+					<div class="field">
+                        <label class="label">Horas</label>
+                        <div class="control">
+                            <input class="input" id="horas" type="number" placeholder="Horas">
+                        </div>
+                    </div>
+                    <div class="field">
+						<label class="label">Minutos</label>
+						<div class="control">
+							<input class="input" id="minutos" type="number" placeholder="Minutos">
+						</div>
+					</div>
+					<div class="field">
+						<label class="label">Segundos</label>
+						<div class="control">
+							<input class="input" id="segundos" type="number" placeholder="Segundos">
+						</div>
+					</div>
+				</div>
+				<h2 id="tempoRestante">00:00:00.0</h2>
+				<button id="btnIniciar" class="button is-success"><span class="mdi mdi-play"></span></button>
+				<button id="btnPausar" class="button is-success"><span class="mdi mdi-pause"></span></button>
+				<button id="btnParar" class="button is-success"><span class="mdi mdi-stop"></span></button>
+				<br>
+			</div>
+		</div>
+	</section>
+    <br>
+    <br>
+    <a href="index.html" class="btn">Voltar</a>
+    <div class="footer">
+        <p>Aqui esta um footer</p>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
