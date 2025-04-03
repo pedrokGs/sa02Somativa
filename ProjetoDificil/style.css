@@ -1,54 +1,171 @@
+/* RESET BÁSICO PARA GARANTIR CONSISTÊNCIA ENTRE OS NAVEGADORES */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-body{
-    text-align: center;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header{
-    background-color: black;
-    color: white;
-    padding: 20px;
+/* ESTILOS GERAIS */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center;
+  padding: 0 20px;
 }
 
-h2#tempoRestante{
-	font-size: 2rem;
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-top: 20px;
 }
 
-.button-container {
-    display: flex;
-    gap: 20px; /* Espaçamento entre os links */
-    justify-content: center;
-  }
-  
-  /* Estilo para os links que se parecem com botões */
-  .btn {
-    display: inline-block; /* Faz o link se comportar como um bloco de nível inline */
-    background-color: black;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none; /* Remove o sublinhado */
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Efeito quando o link é hover */
-  .btn:hover {
-    background-color: #444;
-  }
+/* HEADER */
+.header {
+  background-color: #34495e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
 
+.header h1 {
+  font-size: 2.2rem;
+}
+
+/* ESTILOS DOS BOTÕES */
+button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #3498db;
+}
+
+button:disabled {
+  background-color: #7f8c8d;
+  cursor: not-allowed;
+}
+
+/* SEÇÃO PRINCIPAL COM BOTÕES E DISPLAY */
+.section {
+  margin-top: 40px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.input {
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#tempoRestante {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* ALINHAMENTO CENTRALIZADO */
+.columns {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ESTILO DO FOOTER */
 .footer {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
+/* ESTILOS PARA LINKS (BOTÕES DE NAVEGAÇÃO) */
+a {
+  text-decoration: none;
+  color: #2980b9;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #3498db;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  body {
+      padding: 20px 10px;
   }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  .header h1 {
+      font-size: 2rem;
+  }
+
+  #tempoRestante {
+      font-size: 2.5rem;
+  }
+
+  .input {
+      font-size: 1rem;
+  }
+
+  button {
+      font-size: 1rem;
+      padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.6rem;
+  }
+
+  .header h1 {
+      font-size: 1.8rem;
+  }
+
+  #tempoRestante {
+      font-size: 2rem;
+  }
+
+  .input {
+      font-size: 1rem;
+      padding: 8px;
+  }
+
+  button {
+      font-size: 1rem;
+      padding: 10px 15px;
+  }
+}

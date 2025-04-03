@@ -12,48 +12,68 @@
 </head>
 
 <body>
-
-    <div class="header">
-        <h1>Temporizador</h1>
+    <!-- Cabeçalho -->
+    <div class="header has-background-black has-text-white py-5">
+        <h1 class="title is-2">Temporizador</h1>
     </div>
-    <h1>Temporizador</h1>
-	<section class="section">
-		<div class="columns is-centered">
-			<div class="column has-text-centered">
-				<div id="contenedorInputs">
-					<div class="field">
-                        <label class="label">Horas</label>
-                        <div class="control">
-                            <input class="input" id="horas" type="number" placeholder="Horas">
+
+    <!-- Corpo -->
+    <div class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <!-- Inputs para o tempo -->
+                    <div id="contenedorInputs">
+                        <div class="field">
+                            <label class="label">Horas</label>
+                            <div class="control">
+                                <input class="input" id="horas" type="number" placeholder="Horas" min="0">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Minutos</label>
+                            <div class="control">
+                                <input class="input" id="minutos" type="number" placeholder="Minutos" min="0">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Segundos</label>
+                            <div class="control">
+                                <input class="input" id="segundos" type="number" placeholder="Segundos" min="0">
+                            </div>
                         </div>
                     </div>
-                    <div class="field">
-						<label class="label">Minutos</label>
-						<div class="control">
-							<input class="input" id="minutos" type="number" placeholder="Minutos">
-						</div>
-					</div>
-					<div class="field">
-						<label class="label">Segundos</label>
-						<div class="control">
-							<input class="input" id="segundos" type="number" placeholder="Segundos">
-						</div>
-					</div>
-				</div>
-				<h2 id="tempoRestante">00:00:00.0</h2>
-				<button id="btnIniciar" class="button is-success"><span class="mdi mdi-play"></span></button>
-				<button id="btnPausar" class="button is-success"><span class="mdi mdi-pause"></span></button>
-				<button id="btnParar" class="button is-success"><span class="mdi mdi-stop"></span></button>
-				<br>
-			</div>
-		</div>
-	</section>
-    <br>
-    <br>
-    <a href="index.html" class="btn">Voltar</a>
-    <div class="footer">
-        <p>Aqui esta um footer</p>
+
+                    <!-- Tempo restante -->
+                    <h2 id="tempoRestante" class="title is-3">00:00:00.0</h2>
+
+                    <!-- Botões -->
+                    <div class="buttons is-centered">
+                        <button id="btnIniciar" class="button is-success is-large" aria-label="Iniciar temporizador">
+                            <span class="mdi mdi-play"></span>
+                        </button>
+                        <button id="btnPausar" class="button is-warning is-large" aria-label="Pausar temporizador">
+                            <span class="mdi mdi-pause"></span>
+                        </button>
+                        <button id="btnParar" class="button is-danger is-large" aria-label="Parar temporizador">
+                            <span class="mdi mdi-stop"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Link para voltar -->
+    <div class="has-text-centered">
+        <a href="index.html" class="button is-link">Voltar</a>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer has-background-dark has-text-white py-3">
+        <p>Aqui está um footer</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
