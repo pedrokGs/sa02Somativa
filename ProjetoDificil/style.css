@@ -39,6 +39,7 @@ button:hover {
   margin-top: 1%;
   margin-bottom: 1%;
   border-radius: 8px; /* Bordas arredondadas para um visual mais moderno */
+  transition: background-color 1s;
 }
 
 /* Container de cada escolha */
@@ -133,4 +134,35 @@ h1 {
   top: 10px;
   left: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .choiceButtons {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .containerChoice {
+    width: 90%;
+    margin: 10px auto;
+    height: 50%;
+  }
+
+  button {
+    width: 100%;
+    height: auto;
+    margin: 5px 0;
+  }
+
+  .mode-container{
+    display: flex;
+    flex-direction: column;
+  }
 }
